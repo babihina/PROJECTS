@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .grid-container{
+        display: grid;
+        grid-template-columns: 1fr 3fr 1fr;
+        grid-template-rows: auto auto 1 fr auto;
+        grid-template-areas: 
+        "header header header"
+        "nav nav nav"
+        "sidebar-main main sidebar-right"
+        "footer footer footer";
+        gap: 15px;
+        padding: 20px;
+        background-color: beige;
+    }
+    .header{
+        grid-area: header;
+        background-color: #333;
+        color: antiquewhite;
+        text-align: center;
+        padding: 20px;
+    }
+    .nav{
+        grid-area: nav;
+        background-color: #555;
+        color: antiquewhite;
+        text-align: center;
+        padding: 15px;
+    }
+    .sidebar-main{
+        grid-area: sidebar-main;
+        background-color: #fff;
+        padding: 20px;
+    }
+    .main{
+        grid-area: main;
+        background-color: #fff;
+        padding: 20px;
+        border: 1pxsolid #ccc;
+    }
+    .sidebar-right{
+        grid-area: sidebar-right;
+        background-color: #add8e6;
+        padding: 20px;
+    }
+    .footer{
+        grid-area: footer;
+        background-color: #333;
+        color: antiquewhite;
+        text-align: center;
+        padding: 10px;
+    }
+    body{
+        font-family: 'Times New Roman', Times, serif;
+        margin: 0;
+    }
+    h1,h2,h3{
+        margin-top: 0;
+    }
+    p{
+        line-height: 1.5;
+    }
+    img{
+        max-width: 100%;
+        height: auto;
+    }
+    .blog-image{
+        width: 100%;
+        height: auto;
+        margin-bottom: 15px;
+    }
+</style>
+<body>
+   
+    <div class="grid-container">
+        <header class="header">
+        <h1>My Awesome Blog</h1>
+        <p>Sharing thoughts,stories,and ideas</p>
+        </header>
+
+        <nav class="nav">
+            <a href="#home" style="color:white; margin-right:20px ;">Home</a>
+            <a href="#about" style="color:white; margin-right: 20px;">About</a>
+            <a href="#contact" style="color:white;">Contact</a>
+        </nav>
+
+        <aside class="sidebar-main">
+            <h3>Popular posts</h3>
+            <ul>
+                <li><a href="#">How to start a Blog</a></li>
+                <li><a href="#">Top 10 travel shots</a></li>
+                <li><a href="#">Tips for healthy life</a></li>
+            </ul>
+        </aside>
+
+        <main class="main">
+            <h2>Exploring the beauty of nature</h2>
+            <img src="natur1.jpg" alt="nature" class="blog-image">
+            <p>Nature, with its intricate web of life and breathtaking beauty, holds a profound significance in our world. The diversity of flora and fauna, the delicate balance of ecosystems, and the awe-inspiring forces of nature all contribute to the tapestry of life on Earth. From the majestic mountains to the serene oceans, nature's wonders never cease to amaze us. It is our responsibility to cherish, protect, and respect the natural world, for it sustains us in countless ways and enriches our lives with its boundless wonders. Let us embrace the marvels of nature and strive to be stewards of this precious gift for generations to come.</p>
+            <p>Waterfalls come in various sizes, from small cascades to towering falls. Small waterfalls can be just as enchanting as their larger counterparts, offering a peaceful and serene atmosphere. Despite their size, these small waterfalls still exhibit the beauty and power of nature, making them wonderful spots for relaxation and contemplation. Whether it's a gentle trickle over rocks or a mini cascade in a forest stream, small waterfalls add a touch of magic to the natural world.</p>
+            <h3>Why nature matters</h3>
+            <P>Nature matters because it provides us with essential resources for our survival and well-being. From the air we breathe to the food we eat, nature sustains us in countless ways. Additionally, nature offers us beauty, inspiration, and a sense of peace and connection. Preserving and respecting nature is crucial for maintaining a healthy planet for current and future generations.</P>
+            <img src="natur2.jpeg" alt="nature" class="blog-image">
+            <p>Nature is a vast and wondrous entity that encompasses all living and non-living things on Earth. It includes plants, animals, landscapes, and natural phenomena like weather patterns and geological formations. Nature provides us with essential resources, such as clean air, water, food, and materials for shelter. It also offers us beauty, tranquility, and opportunities for recreation and inspiration. Protecting and preserving nature is crucial for maintaining the delicate balance of ecosystems and ensuring a sustainable future for all life on our planet.</p>
+        </main>
+
+        <aside class="sidebar-right">
+            <h3>About the author</h3>
+            <img src="img1.jpeg" alt="author" style="border-radius: 50%;">
+            <p>Hi Reema here, a nature enthusiast and photographer who loves exploring the wild outdoors,follows my journey as i uncover the beauty of nature</p>
+        </aside>
+
+        <footer class="footer">
+            <p>&copy; 2024 My Awesome Blog | All rights reserved</p>
+        </footer>
+
+    </div>
+</body>
+</html>
