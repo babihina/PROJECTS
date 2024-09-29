@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+
+<style>
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+.todo-app {
+    width: 600px;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.app-title {
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+.task-containers {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+.tasks.uncompleted-tasks {
+    width: 48%;
+}
+
+.tasks h2 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+.task {
+    background-color: #f9f9f9;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.icons i {
+    margin-right: 10px;
+    cursor: pointer;
+    font-size: 18px;
+    color: #333;
+}
+
+.icons i:hover {
+    color: #007bff;
+}
+.tasks.completed-tasks {
+    background-color: #d4edda; /* Light green background for completed tasks */
+    padding: 15px;
+    border-radius: 5px;
+    width: 48%;
+}
+
+.task.completed {
+    background-color: #c3e6cb; /* Slightly darker green for individual completed tasks */
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 4px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.task.completed .icons i {
+    cursor: pointer;
+    font-size: 18px;
+    color: #dc3545; /* Red color for trash icon */
+}
+
+.task.completed .icons i:hover {
+    color: #bd2130; /* Darker red when hovering over trash icon */
+}
+.add-task form {
+    display: flex;
+    justify-content: space-between;
+}
+
+.add-task input {
+    width: 80%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.add-task button {
+    padding: 10px 20px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.add-task button:hover {
+    background-color: #218838;
+}
+</style>
+
+<body>
+    <div class="todo-app">
+        <h1 class="app-title">Simple To-Do App</h1>
+
+        <div class="task-container">
+            <!--uncompleted-->
+            <div class="tasks uncompleted-tasks">
+                <h2>Uncompleted Tasks</h2>
+                <div class="task">
+                    <p>Task 1</p>
+                    <div class="icons">
+                        <i class="fa fa-check"></i>
+                        <i class="fa fa-edit"></i>
+                        <i class="fa fa-trash"></i>
+                    </div>
+                </div>
+                <div class="task">
+                    <p>Task 2</p>
+                    <div class="icons">
+                        <i class="fa fa-check"></i>
+                        <i class="fa fa-edit"></i>
+                        <i class="fa fa-trash"></i>
+                    </div>
+                </div>
+                 </div>
+
+                 <!--completed-->
+                 <div class="tasks completed-tasks">
+                    <h2>Completed Tasks</h2>
+                    <div class="task completed">
+                        <p>Completed Task 1</p>
+                        <div class="icons">
+                            <i class="fa fa-trash"></i>
+                        </div>
+                    </div>
+                    <div class="task completed">
+                        <p>Completed Task 2</p>
+                        <div class="icons">
+                            <i class="fa fa-trash"></i>
+                        </div>
+                    </div>
+                 </div>
+            </div>
+
+            <!--task form-->
+            <div class="add-task">
+                <form>
+                    <input type="text" placeholder="Enter new task..." required>
+                    <button type="submit">Add Task</button>
+                </form>
+            </div>
+        </div>
+</body>
+</html>
